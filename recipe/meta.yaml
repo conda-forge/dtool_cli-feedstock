@@ -33,6 +33,9 @@ requirements:
 test:
   commands:
     - dtool --help
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://github.com/{{ author }}/{{ reponame }}
