@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - dtool = dtool_cli.cli:dtool
@@ -21,10 +21,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - click
     - click-plugins
     - setuptools
@@ -33,6 +33,9 @@ requirements:
 test:
   commands:
     - dtool --help
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://github.com/{{ author }}/{{ reponame }}
@@ -45,3 +48,4 @@ about:
 extra:
   recipe-maintainers:
     - pvanheus
+    - jan-janssen
