@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/dtool-cli/dtool-cli-{{ version }}.tar.gz
-  sha256: "955dd91d7cd5aee04a17ef6bb2537b950affb25db2802ffacb5bbee31ab4b4ff"
+  sha256: "0e320ad42766485c931ab0338e36f0e498839522761684dc95ed347f261185c2"
 
 build:
   number: 2
