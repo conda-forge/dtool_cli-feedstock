@@ -1,7 +1,7 @@
 About dtool_cli
 ===============
 
-Home: http://github.com/jic-dtool/dtool-cli
+Home: https://github.com/jic-dtool/dtool-cli
 
 Package license: MIT
 
@@ -10,6 +10,8 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dtool_cli-feeds
 Summary: The dtool-cli python package provides a skeleton command line interface to dtool that other "dtool" command line packages can be plugged into.
 
 Development: https://github.com/jic-dtool/dtool-cli
+
+Documentation: https://github.com/jic-dtool/dtool-cli
 
 Current build status
 ====================
