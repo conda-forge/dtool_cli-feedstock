@@ -10,7 +10,7 @@ source:
   sha256: "0e320ad42766485c931ab0338e36f0e498839522761684dc95ed347f261185c2"
 
 build:
-  number: 2
+  number: 3
   noarch: python
   entry_points:
     - dtool = dtool_cli.cli:dtool
@@ -46,3 +46,4 @@ extra:
   recipe-maintainers:
     - pvanheus
     - jan-janssen
+    - tjelvar-olsson
