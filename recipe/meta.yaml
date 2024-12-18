@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/dtool-cli/dtool-cli-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/dtool-cli/dtool-cli-{{ version }}.tar.gz
   sha256: 2664750dd76ece7d41e8aa7288cda66aef2f04eb4d39dcd13484fc1a193d3385
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - dtool = dtool_cli.cli:dtool
@@ -18,10 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - click
     - click-plugins
     - setuptools
@@ -33,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jic-dtool/dtool-cli
