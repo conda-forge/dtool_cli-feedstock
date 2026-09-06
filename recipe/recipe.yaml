@@ -29,7 +29,7 @@ requirements:
     - python >=${{ python_min }}
     - click
     - click-plugins
-    - setuptools
+    - setuptools <80
     - dtoolcore
 
 tests:
