@@ -2,18 +2,18 @@ schema_version: 1
 
 context:
   name: dtool_cli
-  version: "0.7.1"
+  version: "0.7.2"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/dtool-cli/dtool-cli-${{ version }}.tar.gz
-  sha256: 2664750dd76ece7d41e8aa7288cda66aef2f04eb4d39dcd13484fc1a193d3385
+  url: https://pypi.org/packages/source/${{ name[0] }}/dtool-cli/${{ name }}-${{ version }}.tar.gz
+  sha256: bbc52a38ef067c6770afc0587c6daef2129ee71e371dab6e3a9fdca65161bc8b
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
@@ -24,12 +24,12 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools
+    - hatchling
+    - hatch-vcs
   run:
     - python >=${{ python_min }}
     - click
     - click-plugins
-    - setuptools <80
     - dtoolcore
 
 tests:
